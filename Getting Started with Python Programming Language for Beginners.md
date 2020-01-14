@@ -105,11 +105,11 @@ In this Python installation guide, you’ll see step by step how to set up a wor
 
 **Step 1: Download the Python 3 Installer**
 
-Open a browser window and navigate to the Download page for Windows at python.org. Click on the link for the Latest Python 3 Release - Python 3.x.x. (As of this writing, the latest is Python 3.8.5.)Select either Windows x86-64 executable installer for 64-bit or for 32-bit. 
+Open a browser window and navigate to the Download page for Windows at python.org. Click on the link for the Latest Python 3 Release - Python 3.8.1. (As of this writing, the latest is Python 3.8.1.)Select either Windows x86-64 executable installer for 64-bit or for 32-bit. 
 
 **Step 2: Run the Installer**
 
-Simply run the installer by double-clicking on the downloaded file. A dialog should appear. Ensure that the Install launcher for all users (recommended) and the Add Python 3.7 to PATH checkboxes at the bottom are checked. Then just click Install Now. Python should now be installed.
+Simply run the installer by double-clicking on the downloaded file. A dialog should appear. Ensure that the Install launcher for all users (recommended) and the Add Python 3.8 to PATH checkboxes at the bottom are checked. Then just click Install Now. Python should now be installed.
 
 #### Veryifing
 
@@ -270,6 +270,8 @@ window open until the user is done with an application.
 
 A variable is a named place in the memory where a programmer can store data and later retrieve the data using the variable "name".A programmer gets to choose the names of the variables and can change the contents of a variable in a later statement
 
+**Sample Code**
+
 <code>X = 12.2
 y = 14
 x = 100
@@ -290,7 +292,7 @@ and some bad examples are<br>
 
 `spam Spam and SPAM` are 3 different variables 
 
-**Example code**
+**Example 01**
 
 <code>hours = 35.0
 rate = 12.50
@@ -309,7 +311,7 @@ a string constant uses single quotes (') or double quotes (") for example: 'Hell
 We can assign a value to a variable using the assignment statement (=)
 An assignment statement consists of an expression on the right hand side and a variable to store the result.
 
-**Example Code** 
+**Example 02** 
 
 `x = 12 * 4`<br>
 
@@ -346,7 +348,7 @@ The result will give x being assigned the value 0.228
     </tr>
 </table>
 
-**Examples of Numeric Expressions**
+**Example 03**
 
 <code>x = 2
 x = x + 2
@@ -390,6 +392,8 @@ Highest precedence rule to lowest precedence rule:
 </ol>
 In Python variables, literals and constants have a type. Some operations are prohibited such as adding a number to a string. We can ask python what type a particular variable is by using the type() function
 
+**Example 04**
+
 <code>w = "hello"
 print(type(w))
 </code>
@@ -414,6 +418,8 @@ Every other number types are variations of float and integer type
 When you put an integer and a floating point in an expression, the integer is implicitly converted to a float.
 We can control this with the built-in functions int() and float() for example
 
+**Example 05**
+
 <code>print(float(99) + 100)</code>
 
 Result: 199.0
@@ -427,6 +433,8 @@ Result: 5.0
 **String Conversions**
 
 We can also use int() and float() to convert strings and integers. Note: You will get an error if the string does not contain numeric characters
+
+**Example 06**
 
 <code>v = '123'
 print(type(v))</code>
@@ -448,7 +456,7 @@ Conditional statements help to specify actions taken in anticipation of conditio
 
 It consists of a boolean expression followed by one or more statements
 
-**Program:**
+**Example 01**
 
 <code>x = 5
 if x < 10:
@@ -496,7 +504,7 @@ Boolean Expressions using comparison operators evaluate to either True / False
 An if statement can be followed by an optional else statement, which
 executes when the boolean expression is FALSE. 
 
-**Program:**
+**Example 02**
 
 <code>x = 4
 if x > 2:
@@ -515,7 +523,7 @@ Done
 
 The elif statement allows you to check multiple expressions for TRUE and execute a block of code as soon as one of the conditions evaluates to TRUE.
 
-**Program:**
+**Example 03**
 
 <code>x=0
 if x < 2 :
@@ -535,7 +543,7 @@ Done
 
 If you have some suspicious code that may raise an exception, you can defend your program by placing the suspicious code in a try: block. After the try:block, include an except: statement, followed by a block of code which handles the problem as elegantly as possible.
 
-**Program**
+**Example 04**
 
 <code>str1 = "Hello John"
 try:
@@ -569,6 +577,8 @@ A function is a block of organized, reusable code that is used to perform a sing
 
 Defining a function only gives it a name, specifies the parameters that are to be included in the function and structures the blocks of code.
 
+**Example 01** 
+
 <code>def thing():
     print("Hello")
     print("Fun")
@@ -595,7 +605,9 @@ An argument is a value we pass into the function as its input when we call the f
 
 A parameter is a variable which we use in the function definition. It is a "handle" that allows the code in the function to access the arguments for a particular function invocation.
 
-<code>def greet(lang)
+**Example 02**
+
+<code>def greet(lang):
     if lang == "es":
         print("Hola")
     elif lang == "fr":
@@ -637,6 +649,8 @@ Bonjour
 
 Often a function will take arguments, do some computation and return a value to be used as the value of the function all in the calling expression. The return keyword is used for this.
 
+**Example 03**
+
 <code>def greet():
     return "Hello "
    
@@ -654,6 +668,8 @@ Hello Sally
 
 We can define more than one parameter in the function definition. We simplyadd more arguments when we call the function. We match the number and order of arguments and parameters
 
+**Example 04**
+
 <code>def add(a, b):
     sum = a + b
     return sum
@@ -666,7 +682,7 @@ print(x)
 
 11
 
-## Chapter 5: Loops and Iterations
+## Chapter 4: Loops and Iterations
 
 There may be a situation when you need to execute a block of code several number of times. A loop statement allows us to execute a statement or group of statements multiple times. Python programming language provides following types of loops to handle looping requirements.
 
@@ -677,7 +693,7 @@ Loops (repeated steps) have iteration variables that change each time through a 
 A while loop statement in Python programming language repeatedly executes a
 target statement as long as a given condition is true.
 
-**Program:**
+**Example 01**
 
 <code>n = 5
 while n > 0:
@@ -703,7 +719,7 @@ A loop becomes infinite loop if a condition never becomes FALSE. You must use
 caution when using while loops because of the possibility that this condition never resolves to a FALSE value. This results in a loop that never ends hence infinite loop.
 
 
-**Program:**
+**Example 02**
 
 <code>n = 5
 while n > 0:
@@ -716,7 +732,7 @@ print("Sleep")
 
 The break statement ends the current loop and jumps to the statement immediately following the loop. 
 
-**Program:**
+**Example 03**
 
 <code>while True:
     line = input(">")
@@ -748,7 +764,7 @@ Done!
 
 The continue statement ends the current iteration and jumps to the top of the loop and starts the next iteration
 
-**Program:**
+**Example 03**
 
 <code>while True:
     line = input(">")
@@ -789,14 +805,14 @@ It has the ability to iterate over the items of any sequence, such as a list or 
 
 If a sequence contains an expression list, it is evaluated first. Then, the first item in the sequence is assigned to the iterating variable. Next, the statements block is executed. Each item in the list is assigned to the iterating variable, and the statement(s) block is executed until the entire sequence is exhausted.
 
-**Program 1:**
+**Example 04 a**
 
 <code>for i in [5,4,3,2,1]:
     print(i)
 print("Blastoff")
 </code>
 
-**Output 1: **
+**Output 04 a: **
 
 5 <br>
 4 <br>
@@ -805,15 +821,15 @@ print("Blastoff")
 1 <br>
 Blastoff
 
-**Program 2:**
+**Program 04 b:**
 
 <code>friends = ["John", "Sally", "Patel"]
 for friend in friends:
-    print("Happy New Year:, friend)
+    print("Happy New Year:", friend)
 print("Done")
 </code>
 
-**Output 2: **
+**Output 04 b: **
 
 The iteration variable "iterates" through the sequence (ordered set)
 The block (body) of code is executed once for each value in the sequence
@@ -824,14 +840,14 @@ The iteration variable moves through all the values in the sequence
 It is used when a statement is required syntactically but you do not want any
 command or code to execute.The pass statement is a null operation; nothing happens when it executes.The pass is also useful in places where your code will eventually go, but has not been written yet.
 
-**Program:**
+**Example 05**
 
 <code>for letter in 'Python':
     if letter == 'h':
         pass
-        print 'This is pass block'
-    print 'Current Letter :', letter
-print "Good bye!"
+        print('This is pass block')
+    print('Current Letter :', letter)
+print("Good bye!")
 </code>
 
 **Output:**
@@ -853,7 +869,7 @@ Python programming language allows to use one loop inside another loop.
 The following program uses a nested for loop to find the prime numbers from 2 to
 100:
 
-**Program:**
+**Example 06**
 
 <code>i = 2
 while(i < 100):
@@ -861,10 +877,10 @@ while(i < 100):
     while(j <= (i/j)):
         if not(i%j): break
         j = j + 1
-    if (j > i/j) : print i, " is prime"
+    if (j > i/j) : print(i, " is prime")
     i = i + 1
     
-print "Good bye!"
+print("Good bye!")
 </code>
 
 **Output:**
